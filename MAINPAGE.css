@@ -1,0 +1,15 @@
+.btn {
+    height: 300px;
+    width: 200px;
+
+    font-size: 100%;
+    font-family: arial;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline-block;
+    margin: auto;   
+}
+
+body {
+    margin: auto;
+}
