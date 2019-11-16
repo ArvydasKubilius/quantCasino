@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="jquery-ui.min.js"></script>
+	<script type="text/javascript" src="src/rouletteWheel.js"></script>
+	<link rel="stylesheet" href="roulette-wheel.css"></link>
+	<script type="text/javascript">
+		$(function(){
+
+			var itemsToShow = 38;
+			var wheel = ["00",27,10,25,29,12,8,19,31,18,6,21,33,16,4,23,35,14,2,0,28,9,26,30,11,7,20,32,17,5,22,34,15,3,24,36,13,1]
+			var items = {};
+			for(var i=0; i < itemsToShow; i++){
+				items[i] = wheel[i]
+			}
+		  $('#canvas').rouletteWheel({
+		    items : items,
+		    selected : function(key, value){
+		      alert(value);
+		    },
+		    spinText : 'SPIN!',
+		  });
+
+		});
+	</script>
+	<title></title>
+</head>
+<body background="https://singularityhub.com/wp-content/uploads/2019/03/IBM-quantum-machine-learning-nature-art-square-Computing-1068x601.jpg">
+	<div class="page-header">
+			<h1>
+				Quantum Roulette
+			</h1>
+			<hr>
+	</div>
+	<canvas id="canvas" width="800" height="800"></canvas>
+
+</body>
+</html>
